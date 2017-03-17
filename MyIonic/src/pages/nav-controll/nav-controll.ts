@@ -13,8 +13,17 @@ import { NavController, NavParams } from 'ionic-angular';
 export class NavControllPage {
   pushPage;
   params;
+  show = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
      this.pushPage = NavControllPage;     
-     this.params = { message : "test message"};
+
+     let message = navParams.get('message');
+     if(message) {
+        let index = navParams.get('index') + 1;
+        this.params = { message : message, index : index};
+        this.show = true;
+     } else {
+       this.params = { message : "this is message", index : 0};
+     }
   }
 }
