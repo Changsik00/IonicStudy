@@ -1,0 +1,23 @@
+<!--
+  https://ionicframework.com/docs/v2/api/navigation/NavController/
+  https://ionicframework.com/docs/v2/api/components/nav/NavPush/
+  https://ionicframework.com/docs/v2/api/components/nav/NavPop/
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NavControll</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1> {{ navParams.data?.message }}</h1>
+  <p>
+    <button ion-button [navPush]="pushPage" [navParams]="params">Go</button>
+  </p> 
+  <p>
+    <button ion-button color="secondary" navPop>Go Back</button>
+  </p>
+</ion-content>

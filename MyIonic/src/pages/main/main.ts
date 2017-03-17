@@ -15,10 +15,6 @@ export class MainPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
-  }
-
   gotoPrevious() {
     console.log('MainPage gotoPrevious()');
     this.navCtrl.pop();
