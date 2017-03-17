@@ -28,13 +28,10 @@ export class NavControllPage {
             events.subscribe('user:created', (user, time) => {
                 console.log(`Welcome, ${user} , at  ${time}`);
             });
-
         } else {
             this.events.unsubscribe('user:created');
             this.params = { message: "this is message", index: 0 };
         }
-
-
     }
 
     pushPage() {
