@@ -14,10 +14,10 @@
 
 <ion-content padding>
   <h1 *ngIf = "show"> {{ navParams.data?.message +  navParams.get("index") }}</h1>
-  <p>
-    <button ion-button [navPush]="pushPage" [navParams]="params">Go</button>
+   <p>
+    <button ion-button (click) = "pushPage()">Go</button>
   </p> 
   <p>
-    <button ion-button color="secondary" navPop>Go Back</button>
+    <button ion-button color="secondary" (click) = "popPage()">Go Back</button>
   </p>
 </ion-content>
