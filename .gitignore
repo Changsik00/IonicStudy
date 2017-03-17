@@ -1,3 +1,5 @@
+
+###### Node Ignore
 # Logs
 logs
 *.log
@@ -35,3 +37,37 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+##### Ionic Ignore
+*~
+*.sw[mnpcod]
+
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+
+*~
+*.sw[mnpcod]
+
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+.sass-cache/
+.versions/
+coverage/
+dist/
+tmp/
+temp/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+
+.package.tmp.json
