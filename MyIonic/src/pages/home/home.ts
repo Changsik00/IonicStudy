@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 
 import { MainPage } from '../main/main';
 import { NavControllPage } from '../nav-controll/nav-controll';
-
+import { DirectivesPage } from '../directives/directives'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,7 +18,8 @@ export class HomePage {
 
     this.items = [
         {title: "Goto Main" , page: MainPage},
-        {title: "Goto NavControll" , page: NavControllPage}
+        {title: "Goto NavControll" , page: NavControllPage},
+        {title: "Goto DirectivesPage" , page: DirectivesPage},
     ];
 
   }
