@@ -11,12 +11,19 @@ import { NavControllPage } from '../nav-controll/nav-controll';
 })
 export class HomePage {
   pushPage;
+  items: Array<{title: string, page: any}>;
+  groceries: any;
   constructor(public navCtrl: NavController) {
     this.pushPage = NavControllPage;
+
+    this.items = [
+        {title: "Goto Main" , page: MainPage},
+        {title: "Goto NavControll" , page: NavControllPage}
+    ];
+
   }
 
-  gotoNext() {
-      console.log('HomePage gotoNext()');
-      this.navCtrl.push(MainPage);
+  itemSelected(item) {
+     this.navCtrl.push(item.page);
   }
 }

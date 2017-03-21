@@ -18,7 +18,6 @@ export class NavControllPage {
     params;
     show = false;
     opts = { animation: "ios-transition" };
-
     index;
     isFirstPage = true;
     constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
@@ -35,7 +34,6 @@ export class NavControllPage {
 
     eventHandler(user, time) {
         console.log(`Welcome, ${user} , at  ${time}`);
-
     }
 
     ionViewDidLoad() {
