@@ -1,0 +1,45 @@
+<!--
+  Generated template for the NgClass page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+
+  https://coryrylan.com/blog/introduction-to-angular-ngclass-and-ngstyle
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NgClass</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3>Angular 2 ngClass and ngStyle demo</h3>
+
+  <div [style.color]="'orange'">style using property syntax</div>
+  <div [className]="'blue'">css class using property syntax</div>
+
+  <br /><br />
+
+  <input [(ngModel)]="color" />
+  <button (click)="size = size + 1">+</button>
+  <button (click)="size = size - 1">-</button>
+
+  <div [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+    style using ngStyle
+  </div>
+
+  <br /><br/>
+
+  <div [ngClass]="['bold-text', 'green']">array of classes</div>
+  <div [ngClass]="'italic-text blue'">string of classes</div>
+  <div [ngClass]="{'small-text': true, 'red': true}">object/map of classes</div>
+
+  <br /><br/>
+
+  <span [ngClass]="displayText">toggled with ngClass</span> <button (click)="toggle()">Toggle</button>
+
+
+</ion-content>
