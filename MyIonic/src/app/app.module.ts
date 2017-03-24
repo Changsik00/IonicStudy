@@ -7,6 +7,7 @@ import { NavControllPage } from '../pages/nav-controll/nav-controll';
 import { DirectivesPage } from '../pages/directives/directives';
 import { BindPage } from '../pages/bind/bind';
 import { NgClassPage } from '../pages/ng-class/ng-class';
+import { JsonDataPage } from '../pages/json-data/json-data';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgClassPage } from '../pages/ng-class/ng-class';
     NavControllPage,
     DirectivesPage,
     BindPage,
-    NgClassPage
+    NgClassPage,
+    JsonDataPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,7 +31,8 @@ import { NgClassPage } from '../pages/ng-class/ng-class';
     NavControllPage,
     DirectivesPage,
     BindPage,
-    NgClassPage
+    NgClassPage,
+    JsonDataPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

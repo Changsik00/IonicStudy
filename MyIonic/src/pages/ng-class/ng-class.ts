@@ -12,11 +12,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ng-class.html'
 })
 export class NgClassPage {
-   color = 'pink';
-   size = 16;
-   displayText = 'show-class';
-   visible = true;
-   
+  color = 'pink';
+  size = 16;
+  displayText = 'show-class';
+  visible = true;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
