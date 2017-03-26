@@ -3,6 +3,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { TestDataModel } from '../../models/test-data/test-data';
 /*
   Generated class for the JsonData page.
 
@@ -20,11 +21,10 @@ import 'rxjs/add/operator/map';
 })
 export class JsonDataPage {
   show = false;
-  title: string;
-  body: string;
+  testDataModel: TestDataModel;
   loadingPopup;
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http) {
-    this.loadingPopup = loadingCtrl.create({content: 'Please wait...'});
+    this.loadingPopup = loadingCtrl.create({ content: 'Please wait...' });
     this.loadData();
   }
 
@@ -60,17 +60,15 @@ export class JsonDataPage {
   }
 
   httpResponseSuccess(data) {
-    this.loadingPopup.dismiss();    
+    this.loadingPopup.dismiss();
     this.show = true;
-    console.log("id : " + data.id);
-    console.log("title : " + data.title);
-    console.log("body : " + data.body);
-    this.title = data.title;
-    this.body = data.body;
+
+    this.testDataModel = new TestDataModel(data);
+    console.log("toString : " + this.testDataModel.toString());
   }
 
   httpResponseError(err) {
-    this.loadingPopup.dismiss();    
+    this.loadingPopup.dismiss();
     this.show = false;
     console.log("Oops! : " + err);
   }
