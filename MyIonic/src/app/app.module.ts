@@ -8,6 +8,9 @@ import { DirectivesPage } from '../pages/directives/directives';
 import { BindPage } from '../pages/bind/bind';
 import { NgClassPage } from '../pages/ng-class/ng-class';
 import { JsonDataPage } from '../pages/json-data/json-data';
+import { UIComponentPage } from '../pages/ui-component/ui-component';
+
+import { MyViewComponent } from '../components/my-view/my-view';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { JsonDataPage } from '../pages/json-data/json-data';
     DirectivesPage,
     BindPage,
     NgClassPage,
-    JsonDataPage
+    JsonDataPage,
+    UIComponentPage,
+    MyViewComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,7 +37,8 @@ import { JsonDataPage } from '../pages/json-data/json-data';
     DirectivesPage,
     BindPage,
     NgClassPage,
-    JsonDataPage
+    JsonDataPage,
+    UIComponentPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
