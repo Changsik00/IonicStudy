@@ -27,9 +27,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     $stateProvider
       .state('app', {
         url: '/app',
-        abstract: false,
-        templateUrl: 'templates/app.html'
-      });
+        templateUrl: 'templates/app.html',
+        controller: 'AppCtrl'
+      })
 
-      $urlRouterProvider.otherwise('/app'); 
+      .state('home', {
+        url: '/home',
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      })
+
+    $urlRouterProvider.otherwise('/app');
   })
