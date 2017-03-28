@@ -10,8 +10,8 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('HomeCtrl', function($scope, $location) {
+.controller('HomeCtrl', function($scope, $state) {
   $scope.goPrev = function() {
-      $location.path('/app');
+      $state.go('app'); // '/app' 으로 하면 Error: Could not resolve '/app' from state 'home'
   }
 })
