@@ -71,3 +71,5 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 
 .package.tmp.json
+MyIonic_v1/jsconfig.json
+MyIonic_v1/typings/cordova-typings.d.ts
