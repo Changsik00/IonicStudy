@@ -1,5 +1,20 @@
 angular.module('starter.services', [])
 
+    .factory('appDataService', function () {
+        var sampleList = [
+            { page: 'transition-first', title: 'goto page transition' },
+            { page: 'api-sample', title: 'goto api (get, push) test' },
+        ]
+
+        function getSampleList() {
+            return sampleList;
+        }
+
+        return {
+            getSampleList: getSampleList
+        }
+    })
+
     // http://webframeworks.kr/tutorials/angularjs/angularjs_promise_deferred/
     .factory('testService', function ($q, $http) {
 
@@ -36,7 +51,7 @@ angular.module('starter.services', [])
         }
 
         return {
-            getData: getData, 
-            getData2: getData2, 
+            getData: getData,
+            getData2: getData2,
         };
     })
