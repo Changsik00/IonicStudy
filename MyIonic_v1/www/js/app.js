@@ -25,18 +25,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('app', {
-        url: '/app',
+
+     .state('main', {
+        url: '/main',
+        templateUrl: 'templates/main.html',
+        controller: 'MainCtrl'
+      })
+
+      .state('transition-first', {
+        url: '/transition-first',
         templateUrl: 'templates/app.html',
         controller: 'AppCtrl'
       })
 
-      .state('home', {
-        url: '/home',
+      .state('transition-second', {
+        url: '/transition-second',
         params: { data: null },
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl'
       })
 
-    $urlRouterProvider.otherwise('/app');
+    $urlRouterProvider.otherwise('/main');
   })

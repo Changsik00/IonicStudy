@@ -1,5 +1,13 @@
 angular.module('starter.controllers', [])
 
+    .controller('MainCtrl', function ($scope, $state, appDataService) {
+        $scope.sampleList = appDataService.getSampleList()
+
+        $scope.gotoSamplePage = function (sample) {
+            $state.go(sample.page)
+        }
+    })
+
     .controller('AppCtrl', function ($scope, $state, testService) {
         $scope.goNext = function (index) {
             $state.go('home', { data: "testData" });
