@@ -1,20 +1,23 @@
 angular.module('starter.controllers', [])
 
     .controller('AppCtrl', function ($scope, $state, testService) {
-        $scope.$on('$ionicView.enter', function (e) {
-            var promise = testService.getData(1);
-            promise.then(function (result) {
-                console.log(result.body);
-            })
-            
-            testService.getData2().then(function (result) {
-                console.log(result);
-            })
-        });
-
         $scope.goNext = function (index) {
             $state.go('home', { data: "testData" });
         }
+
+        $scope.getData = function (index) {
+            console.log("#@# getData()")
+            testService.getData(1).then(function (result) {
+                console.log("#@# scope bind + " + result.body)
+                $scope.body = result.body;
+            })
+        }
+
+        $scope.chageData = function (index) {
+            $scope.body = "change";
+        }
+
+
     })
 
     .controller('HomeCtrl', function ($scope, $state, $stateParams) {
