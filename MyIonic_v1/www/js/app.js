@@ -48,7 +48,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
       .state('api-sample', {
         url: '/api-sample',
-        params: { data: null },
         templateUrl: 'templates/api-sample.html',
         controller: 'ApiSampleCtrl'
       })
