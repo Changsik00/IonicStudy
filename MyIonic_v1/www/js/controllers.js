@@ -36,7 +36,7 @@ angular.module('starter.controllers', [])
         }
     })
 
-    .controller('ApiSampleCtrl', function ($scope, $state, testService) {
+    .controller('ModalLoginCtrl', function ($scope, $state, testService) {
         $scope.getData = function (index) {
             // service 를 이용하여 외부로 모듈화 시킴 
             // testService.getData(1) 는 q 의 promiss 를 반환함 

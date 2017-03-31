@@ -51,6 +51,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/api-sample.html',
         controller: 'ApiSampleCtrl'
       })
+      
+      .state('modal-login', {
+        url: '/modal-login',
+        templateUrl: 'templates/modal-login.html',
+        controller: 'ModalLoginCtrl'
+      })
 
     $urlRouterProvider.otherwise('/main');
   })
