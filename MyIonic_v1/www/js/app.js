@@ -26,7 +26,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-     .state('main', {
+      .state('main', {
         url: '/main',
         templateUrl: 'templates/main.html',
         controller: 'MainCtrl'
@@ -51,10 +51,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/api-sample.html',
         controller: 'ApiSampleCtrl'
       })
-      
-      .state('modal-login', {
-        url: '/modal-login',
-        templateUrl: 'templates/modal-login.html',
+
+      .state('modal-sample', {
+        url: '/modal-sample',
+        templateUrl: 'templates/modal-sample.html',
         controller: 'ModalLoginCtrl'
       })
 

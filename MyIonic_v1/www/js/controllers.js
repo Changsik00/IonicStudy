@@ -36,16 +36,29 @@ angular.module('starter.controllers', [])
         }
     })
 
-    .controller('ModalLoginCtrl', function ($scope, $state, testService) {
-        $scope.getData = function (index) {
-            // service 를 이용하여 외부로 모듈화 시킴 
-            // testService.getData(1) 는 q 의 promiss 를 반환함 
-            testService.getData(1).then(function (result) {
-                $scope.body = result.body;
-            })
+    .controller('ModalLoginCtrl', function ($scope, $ionicModal) {
+
+        $scope.data = { username: "", password: ""}
+
+        $ionicModal.fromTemplateUrl('templates/modal-login.html', {
+            scope: $scope,
+            animation: 'slide-in-up' // https://github.com/kevincobain2000/ionic-animated-modal
+        }).then(function (modal) {
+            $scope.modal = modal;
+        });
+
+        $scope.showModal = function (index) {
+            $scope.modal.show();
         }
 
-        $scope.chageData = function (index) {
-            $scope.body = "change";
+        $scope.closeModal = function () {
+            $scope.modal.hide();
+        }
+
+        $scope.loginClick = function () {
+            console.log("#@# username : " + $scope.data.username)
+            console.log("#@# password : " + $scope.data.password)
+
+            $scope.modal.hide();
         }
     })
