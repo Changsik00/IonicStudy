@@ -38,11 +38,20 @@ angular.module('starter.controllers', [])
 
     .controller('ModalLoginCtrl', function ($scope, $ionicModal) {
 
-        $scope.data = { username: "", password: ""}
+
+        // https://github.com/kevincobain2000/ionic-animated-modal
+        // http://loring-dodge.azurewebsites.net/ionic-nifty-modal/
+        // https://github.com/loringdodge/ionic-nifty-modal
+        // nifty-modal 적용해서 테스트
+
+        $scope.modalClasses = ['slide-in-up', 'slide-in-down', 'fade-in-scale',
+            'fade-in-right', 'fade-in-left', 'newspaper', 'jelly', 'road-runner',
+            'splat', 'spin', 'swoosh', 'fold-unfold'];
+        $scope.data = { username: "", password: "" }
 
         $ionicModal.fromTemplateUrl('templates/modal-login.html', {
             scope: $scope,
-            animation: 'slide-in-up' // https://github.com/kevincobain2000/ionic-animated-modal
+            animation: 'jelly'
         }).then(function (modal) {
             $scope.modal = modal;
         });
