@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic', 'ionic-toast'])
 
     .controller('MainCtrl', function ($scope, $state, appDataService) {
         $scope.sampleList = appDataService.getSampleList()
@@ -36,7 +36,7 @@ angular.module('starter.controllers', [])
         }
     })
 
-    .controller('ModalLoginCtrl', function ($scope, $ionicModal) {
+    .controller('ModalLoginCtrl', function ($scope, $ionicModal, ionicToast) {
 
 
         // https://github.com/kevincobain2000/ionic-animated-modal
@@ -61,13 +61,17 @@ angular.module('starter.controllers', [])
         }
 
         $scope.closeModal = function () {
-            $scope.modal.hide();
         }
 
         $scope.loginClick = function () {
             console.log("#@# username : " + $scope.data.username)
             console.log("#@# password : " + $scope.data.password)
 
+            // https://github.com/rajeshwarpatlolla/ionic-toast
+            // ionicToast.show(message, position, stick, time);
+            ionicToast.show('Hide Modal', 'top', true, 2500);
+            $scope.modal.hide();
+            
             $scope.modal.hide();
         }
     })

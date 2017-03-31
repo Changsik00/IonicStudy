@@ -73,3 +73,7 @@ UserInterfaceState.xcuserstate
 .package.tmp.json
 MyIonic_v1/jsconfig.json
 MyIonic_v1/typings/cordova-typings.d.ts
+
+.bower.json
+
+MyIonic_v1/www/lib/
