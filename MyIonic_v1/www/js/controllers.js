@@ -61,17 +61,28 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
         }
 
         $scope.closeModal = function () {
-        }
 
+        }
+    })
+
+    .controller('LoginCtrl', function ($scope, ionicToast) {
+        console.log("#@# LoginCtr");
+
+        var title = "Test title2";
+
+        $scope.title = title;
+        
         $scope.loginClick = function () {
             console.log("#@# username : " + $scope.data.username)
             console.log("#@# password : " + $scope.data.password)
 
             // https://github.com/rajeshwarpatlolla/ionic-toast
             // ionicToast.show(message, position, stick, time);
-            ionicToast.show('Hide Modal', 'top', true, 2500);
-            $scope.modal.hide();
-            
-            $scope.modal.hide();
+
+            if ($scope.data.username.length == 0) {
+                ionicToast.show('이름을 입력해 주세요', 'top', true, 2500);
+            } else {
+                $scope.modal.hide();
+            }
         }
     })
