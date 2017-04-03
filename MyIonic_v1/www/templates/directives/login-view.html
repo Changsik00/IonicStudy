@@ -1,0 +1,12 @@
+< <ion-content ng-controller="LoginCtrl" class="padding">
+    <h1 id="title" class="padding">{{ title }}</h1>
+    <div class="list list-inset">
+        <label class="item item-input">
+              <input id="name" type="text" placeholder="Username" ng-model="data.username">
+          </label>
+        <label class="item item-input">
+              <input id="password" type="password" placeholder="Password" ng-model="data.password">
+          </label>
+    </div>
+    <button class="button button-full button-calm" ng-click="login()">Login</button>
+</ <ion-content >
