@@ -58,5 +58,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'ModalLoginCtrl'
       })
 
+      .state('loading', {
+        url: '/loading',
+        template: '<ion-view view-title="Loading"></ion-view>',
+        controller: 'LoadingCtrl'
+      })
+
     $urlRouterProvider.otherwise('/main');
   })

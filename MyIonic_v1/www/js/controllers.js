@@ -71,7 +71,26 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
             // ionicToast.show(message, position, stick, time);
             ionicToast.show('Hide Modal', 'top', true, 2500);
             $scope.modal.hide();
-            
+
             $scope.modal.hide();
         }
     })
+
+    .controller('LoadingCtrl', function ($scope, $ionicLoading) {
+        $scope.show = function () {
+            $ionicLoading.show({
+                template: 'Loading...',
+                duration: 3000
+            }).then(function () {
+                console.log("The loading indicator is now displayed");
+            });
+        };
+        $scope.hide = function () {
+            $ionicLoading.hide().then(function () {
+                console.log("The loading indicator is now hidden");
+            });
+        };
+
+
+        $scope.show();
+    });

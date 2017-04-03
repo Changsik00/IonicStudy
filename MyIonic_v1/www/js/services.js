@@ -4,7 +4,8 @@ angular.module('starter.services', [])
         var sampleList = [
             { page: 'transition-first', title: 'goto page transition' },
             { page: 'api-sample', title: 'goto api (get, push) test' },
-            { page: 'modal-sample', title: 'goto modal login' }
+            { page: 'modal-sample', title: 'goto modal login' },
+            { page: 'loading', title: 'goto loading' }
         ]
 
         function getSampleList() {
