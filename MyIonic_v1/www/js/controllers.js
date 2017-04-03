@@ -89,7 +89,10 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
     .controller('LoadingCtrl', function ($scope, $ionicLoading) {
         $scope.show = function () {
             $ionicLoading.show({
-                template: 'Loading...',
+                
+                showDelay: 0,
+                animation: 'fade-in',
+                template: '<ion-spinner class="spinner-calm" icon="lines"></ion-spinner><div>Loading...</div>',
                 duration: 3000
             }).then(function () {
                 console.log("The loading indicator is now displayed");

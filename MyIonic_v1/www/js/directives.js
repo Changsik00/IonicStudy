@@ -5,6 +5,7 @@
 // 4. controller 추가 
 // https://forum.ionicframework.com/t/adding-an-angular-directive-in-ionic/1552/3
 // https://forum.ionicframework.com/t/accessing-elements-in-a-directive-template/28912/12
+// http://www.nextree.co.kr/p4850/
 
 angular.module('starter.directives', [])
     .directive('loginView', function () {
