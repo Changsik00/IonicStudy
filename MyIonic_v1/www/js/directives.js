@@ -12,3 +12,10 @@ angular.module('starter.directives', [])
             templateUrl: "templates/directives/login-view.html"
         };
     })
+
+    .directive('myView', function () {
+        return {
+            templateUrl: "templates/directives/my-view.html",
+            controller: 'MyViewCtrl'
+        };
+    })

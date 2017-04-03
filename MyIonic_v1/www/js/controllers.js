@@ -61,7 +61,7 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
         }
 
         $scope.closeModal = function () {
-
+            $scope.modal.hide();
         }
     })
 
@@ -71,7 +71,7 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
         var title = "Test title2";
 
         $scope.title = title;
-        
+
         $scope.loginClick = function () {
             console.log("#@# username : " + $scope.data.username)
             console.log("#@# password : " + $scope.data.password)
@@ -103,4 +103,18 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
 
 
         $scope.show();
-    });
+    })
+
+    .controller('MyViewCtrl', function ($scope, $stateParams) {
+        $scope.click = function () {
+            $scope.callback($scope.title)
+        }
+    })
+
+    .controller('DirectivewCtrl', function ($scope, $stateParams) {
+        $scope.titles = ['test1', 'test2'];
+
+        $scope.callback = function (title) {
+            console.log("#@# DirectivewCtrl title " + title);
+        }
+    })

@@ -64,5 +64,11 @@ angular.module('starter', ['ionic','starter.directives', 'starter.controllers', 
         controller: 'LoadingCtrl'
       })
 
+      .state('directive-view', {
+        url: '/directive-view',
+        templateUrl: 'templates/directive-view.html',
+        controller: 'DirectivewCtrl'
+      })
+
     $urlRouterProvider.otherwise('/main');
   })
