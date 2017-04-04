@@ -26,6 +26,18 @@ angular.module('starter', ['ionic', 'starter.directives', 'starter.controllers',
       function (event, toState, toParams) {
         console.log("#@# stateChangeStart")
       });
+
+    $rootScope.safeApply = function (fn) {
+      if (this.$root.$$phase == '$apply' || this.$root.$$phase == '$digest') {
+        if (fn && (typeof (fn) === 'function')) {
+          fn();
+        }
+      }
+      else {
+        this.$apply(fn);
+      }
+    };
+
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -73,6 +85,12 @@ angular.module('starter', ['ionic', 'starter.directives', 'starter.controllers',
         url: '/directive-view',
         templateUrl: 'templates/directive-view.html',
         controller: 'DirectivewCtrl'
+      })
+
+      .state('radio-sample', {
+        url: '/radio-sample',
+        templateUrl: 'templates/radio-sample.html',
+        controller: 'RadioCtrl'
       })
 
     $urlRouterProvider.otherwise('/main');

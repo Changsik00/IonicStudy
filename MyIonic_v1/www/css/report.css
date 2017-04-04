@@ -1,0 +1,182 @@
+.report-menu {
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    vertical-align: top;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: -50px;
+    left: -10000px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+input[type="radio"] + label {
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 auto;
+    color: #333333;
+}
+
+input[type="radio"]:checked + label {
+    text-align: center;
+    color: #e83c79;
+}
+
+/*bmi*/
+input[type="radio"] + label > .AG {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-1.png');
+}
+
+input[type="radio"]:checked + label > .AG {
+    background: url('/img/report-ico-h-1-roll.png');
+}
+
+/*Triglyceride 중성지방*/
+input[type="radio"] + label > .AH {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-2.png');
+}
+
+input[type="radio"]:checked + label > .AH {
+    background: url('/img/report-ico-h-2-roll.png');
+}
+
+/*cholesterol 콜레스테롤*/
+input[type="radio"] + label > .AI {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-3.png');
+}
+
+input[type="radio"]:checked + label > .AI{
+    background: url('/img/report-ico-h-3-roll.png');
+}
+
+/*bloodGlucose 혈당*/
+input[type="radio"] + label > .AJ {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-4.png');
+}
+
+input[type="radio"]:checked + label > .AJ {
+    background: url('/img/report-ico-h-4-roll.png');
+}
+
+/*bloodPressure 혈압*/
+input[type="radio"] + label > .AK {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-5.png');
+}
+
+input[type="radio"]:checked + label > .AK {
+    background: url('/img/report-ico-h-5-roll.png');
+}
+
+/*caffeine 카페인 대사*/
+input[type="radio"] + label > .AL {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-h-6.png');
+}
+
+input[type="radio"]:checked + label > .AL {
+    background: url('/img/report-ico-h-6-roll.png');
+}
+
+/*skinAging 피부 노화*/
+input[type="radio"] + label > .AA {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-1.png');
+}
+
+input[type="radio"]:checked + label > .AA {
+    background: url('/img/report-ico-b-1-roll.png');
+}
+
+/*skinElasticity 피부 탄력*/
+input[type="radio"] + label > .AB {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-2.png');
+}
+
+input[type="radio"]:checked + label > .AB {
+    background: url('/img/report-ico-b-2-roll.png');
+}
+
+/*pigmentation 색소 침착*/
+input[type="radio"] + label > .AC {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-3.png');
+}
+
+input[type="radio"]:checked + label > .AC {
+    background: url('/img/report-ico-b-3-roll.png');
+}
+
+/*hairLoss 탈모*/
+input[type="radio"] + label > .AD {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-4.png');
+}
+
+input[type="radio"]:checked + label > .AD {
+    background: url('/img/report-ico-b-4-roll.png');
+}
+
+/*HairThickness 모발 굵기*/
+input[type="radio"] + label > .AE {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-5.png');
+}
+
+input[type="radio"]:checked + label > .AE {
+    background: url('/img/report-ico-b-5-roll.png');
+}
+
+/*vitaminC 비타민 C 대사*/
+input[type="radio"] + label > .AF {
+    content:'';
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('/img/report-ico-b-6.png');
+}
+
+input[type="radio"]:checked + label > .AF {
+    background: url('/img/report-ico-b-6-roll.png');
+}
