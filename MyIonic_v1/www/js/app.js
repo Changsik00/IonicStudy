@@ -75,5 +75,11 @@ angular.module('starter', ['ionic', 'starter.directives', 'starter.controllers',
         controller: 'DirectivewCtrl'
       })
 
+       .state('radio-sample', {
+        url: '/radio-sample',
+        templateUrl: 'templates/radio-sample.html',
+        controller: 'RadioCtrl'
+      })
+
     $urlRouterProvider.otherwise('/main');
   })

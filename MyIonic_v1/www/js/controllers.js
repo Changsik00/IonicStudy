@@ -89,7 +89,7 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
     .controller('LoadingCtrl', function ($scope, $ionicLoading) {
         $scope.show = function () {
             $ionicLoading.show({
-                
+
                 showDelay: 0,
                 animation: 'fade-in',
                 template: '<ion-spinner class="spinner-calm" icon="lines"></ion-spinner><div>Loading...</div>',
@@ -120,4 +120,64 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
         $scope.callback = function (title) {
             console.log("#@# DirectivewCtrl title " + title);
         }
+    })
+
+
+    .controller('RadioCtrl', function ($scope, $stateParams) {
+        $scope.items = [
+            'AG',
+            'AH',
+            'AI',
+            'AJ',
+            'AK',
+            'AL',
+            'AA',
+            'AB',
+            'AC',
+            'AD',
+            'AE',
+            'AF'
+        ];
+
+        $scope.selected = $scope.items[0]
+
+        $scope.options = {
+            loop: false,
+            slidesPerView: 3,
+            spaceBetween: 10,
+            speed: 300,
+            pagination: '',
+            paginationClickable: true,
+        }
+
+        $scope.slideTo = function (item) {
+            $scope.slider.slideTo(3);
+        }
+        $scope.buttonClick = function () {
+            $scope.slider.slideTo(3);
+            $scope.selected = $scope.items[5];
+        }
+
+        $scope.$on("$ionicView.enter", function (event, data) {
+
+            var $reportMenuGroup = $('input[type=radio][name=report-menu-group]');
+            $reportMenuGroup.each(function () {
+                $(this).prop('checked', this.value == $scope.selected);
+            });
+
+            $reportMenuGroup.on('change', function () {
+                if (this.checked) {
+                    console.log("#@# checked " + this.value);
+                    console.log("#@# $scope.selected " + $scope.selected);
+                    $scope.selected = $scope.items[7];
+                    $scope.slider.slideTo(3);
+                }
+            });
+        });
+
+
+        $scope.$on("$ionicSlides.sliderInitialized", function (event, data) {
+            $scope.slider = data.slider;
+            $scope.selected = $scope.items[1];
+        });
     })

@@ -6,7 +6,8 @@ angular.module('starter.services', [])
             { page: 'api-sample', title: 'goto api (get, push) test' },
             { page: 'modal-sample', title: 'goto modal login' },
             { page: 'loading', title: 'goto loading' },
-            { page: 'directive-view', title: 'goto directive view' }
+            { page: 'directive-view', title: 'goto directive view' },
+            { page: 'radio-sample', title: 'goto radio sample' },
         ]
 
         function getSampleList() {
