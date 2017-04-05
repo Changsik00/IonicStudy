@@ -8,6 +8,7 @@
     "ionic-nifty-modal": "*",
     "ionic-toast": "^0.4.1",
     "slick-carousel": "^1.6.0",
-    "angular-slick-carousel": "^3.1.7"
+    "angular-slick-carousel": "^3.1.7",
+    "angular-material": "^1.1.3"
   }
 }

@@ -2,12 +2,13 @@ angular.module('starter.services', [])
 
     .factory('appDataService', function () {
         var sampleList = [
-            { page: 'transition-first', title: 'goto page transition' },
-            { page: 'api-sample', title: 'goto api (get, push) test' },
-            { page: 'modal-sample', title: 'goto modal login' },
-            { page: 'loading', title: 'goto loading' },
-            { page: 'directive-view', title: 'goto directive view' },
-            { page: 'radio-sample', title: 'goto radio sample' },
+            { page: 'transition-first', title: 'goto page transition' }
+            ,{ page: 'api-sample', title: 'goto api (get, push) test' }
+            ,{ page: 'modal-sample', title: 'goto modal login' }
+            ,{ page: 'loading', title: 'goto loading' }
+            ,{ page: 'directive-view', title: 'goto directive view' }
+            ,{ page: 'radio-sample', title: 'goto radio sample' }
+            ,{ page: 'material-sample', title: 'goto material sample' }
         ]
 
         function getSampleList() {

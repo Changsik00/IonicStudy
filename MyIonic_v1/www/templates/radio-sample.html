@@ -1,17 +1,17 @@
 <ion-view view-title="Radio Sample">
     <ion-content>
-        <ion-slides style="height: 20vw" options="options" slider="data.slider" class="swiper-pagination-black">
+        <ion-slides style="height: 25vw" options="options" slider="data.slider" class="swiper-pagination-black">
             <ion-slide-page ng-repeat="item in items">
                 <div style="text-align: center; margin: 10px;">
                     <input id="{{item}}" name="report-menu-group" type="radio" value="{{item}}" />
                     <label for="{{item}}">
                         <div class="{{item}}"></div>
-                        <div style="margin-top: 10px">{{item}}</div>
+                        <div style="margin-top: 10px">Lorem Ipsum {{item}}</div>
                     </label>
                 </div>
             </ion-slide-page>
         </ion-slides>
-
+        
         <div class="padding">
             <h2> Select Item : {{ selected }} </h2>
             <p>
