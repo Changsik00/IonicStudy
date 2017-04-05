@@ -138,13 +138,15 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
             'AE',
             'AF'
         ];
-
+        // http://idangero.us/swiper/api/#.WORNkVOLRE4
+        // http://idangero.us/swiper/demos/#.WORNfVOLRE6
         $scope.options = {
             loop: false,
-            slidesPerView: 3,
-            spaceBetween: 10,
+            slidesPerView: 5,
             speed: 300,
             pagination: '',
+            spaceBetween: 0,
+            centeredSlides: true,
             paginationClickable: true,
         }
 
@@ -173,12 +175,12 @@ angular.module('starter.controllers', ['ionic', 'ionic-toast'])
 
         $scope.$on("$ionicSlides.sliderInitialized", function (event, data) {
             $scope.slider = data.slider;
-            selectedMoveTo($scope.items[5]);
+            selectedMoveTo($scope.items[0]);
         });
 
         function selectedMoveTo(value) {
             $scope.selected = value;
-            var moveTo = $scope.items.indexOf(value) - 1;
+            var moveTo = $scope.items.indexOf(value);
             if (moveTo < 0) {
                 moveTo = 0;
             }
